@@ -1,0 +1,14 @@
+{
+  "name": "Claire",
+  "guilty": false,
+  "personality": {
+    "fear": 0.3,
+    "confidence": 0.7
+  },
+  "official_story": {
+    "alibi": [
+      "J'étais dans ma cabine à lire",
+      "Je n'ai pas vu Alice ou Bob"
+    ]
+  }
+}

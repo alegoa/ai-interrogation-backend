@@ -1,0 +1,15 @@
+{
+  "name": "Alice",
+  "guilty": true,
+  "personality": {
+    "fear": 0.25,
+    "confidence": 0.6
+  },
+  "alibi": {
+    "time_window": [21.0, 22.5],
+    "location": "Salon",
+    "witnesses": [],
+    "activities": ["lire"],
+    "weaknesses": ["aucun témoin"]
+  }
+}

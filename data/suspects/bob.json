@@ -1,0 +1,14 @@
+{
+  "name": "Bob",
+  "guilty": false,
+  "personality": {
+    "fear": 0.2,
+    "confidence": 0.8
+  },
+  "official_story": {
+    "alibi": [
+      "J'étais au labo toute la soirée",
+      "Personne ne m'a dérangé"
+    ]
+  }
+}

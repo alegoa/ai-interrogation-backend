@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Dataset logs (optionnel)
+data/dataset.jsonl
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
