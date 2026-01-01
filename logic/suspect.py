@@ -5,7 +5,10 @@ class Suspect:
         self.name = data["name"]
         self.guilty = data["guilty"]
         self.personality = data["personality"]
-
+        if not self.guilty:
+            self.strategy = "truth"
+        else:
+            self.strategy = "lie_confident"
         # État dynamique
         self.state = {
             "fear": self.personality["fear"],

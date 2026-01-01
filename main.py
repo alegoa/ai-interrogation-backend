@@ -5,7 +5,7 @@ import json
 import os
 
 from logic.suspect import Suspect
-
+from logic.logger import log_interaction
 print("MAIN.PY LANCÉ")
 
 app = FastAPI( title="Space Investigation AI",
@@ -37,7 +37,17 @@ def ask_suspect(req: AskRequest):
     if req.suspect not in suspects:
         return {"error": "Suspect inconnu"}
     s = suspects[req.suspect]
-    return {"text": s.answer(req.question), "emotion": s.state}
+    s.update_state(req.question)
+    tempanswer= s.answer(req.question)
+    log_interaction(
+        suspect=s.name,
+        question=req.question,
+        strategy=s.strategy,
+        state=s.state,
+        answer=tempanswer
+    )
+    return {"text":tempanswer, "emotion": s.state}
+    
 
 @app.get("/")
 def root():
