@@ -4,7 +4,7 @@
   "personality": {
     "fear": 0.25,
     "confidence": 0.6
-  },
+  },"official_story": "J’étais dans le salon à lire toute la soirée.",
   "alibi": {
     "time_window": [21.0, 22.5],
     "location": "Salon",
