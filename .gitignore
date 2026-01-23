@@ -4,6 +4,13 @@ __pycache__/
 
 # Virtual environment
 venv/
+.env 
+.venv/
+data/
+checkpoints/
+
+*safetensors 
+.cache/
 
 # Dataset logs (optionnel)
 data/dataset.jsonl
