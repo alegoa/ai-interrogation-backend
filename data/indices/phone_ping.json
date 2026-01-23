@@ -1,0 +1,15 @@
+{
+  "id": "phone_ping",
+  "keywords": [
+    "téléphone",
+    "portable",
+    "borne",
+    "localisé",
+    "antenne"
+  ],
+  "description": "Votre téléphone a borné près du lieu du crime.",
+  "effects": {
+    "bob": 0.3,
+    "Alice": 0.3
+  }
+}
