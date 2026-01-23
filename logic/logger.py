@@ -22,7 +22,7 @@ def log_interaction(
         "strategy": strategy,
         "emotion": {
             "fear": state["fear"],
-            "confidence": state["confidence"],
+           
             "pressure": state["pressure"]
         },
         "answer": answer

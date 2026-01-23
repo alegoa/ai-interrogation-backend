@@ -4,24 +4,33 @@ class Suspect:
     def __init__(self, data: dict):
         self.name = data["name"]
         self.guilty = data["guilty"]
-        self.personality = data["personality"]
+        self.alibi = data["alibi"]
+        self.state = data["state"]
+        self.identity = data.get("identity", {})
+       
+     
         if not self.guilty:
             self.strategy = "truth"
         else:
             self.strategy = "lie_confident"
         # État dynamique
         self.state = {
-            "fear": self.personality["fear"],
-            "confidence": self.personality["confidence"],
-            "pressure": 0.0
+            "fear": self.state["fear"],
+            "pressure": self.state["pressure"]
         }
 
         # Mémoire des questions/réponses
         self.memory = []
 
-        self.official_story = data["official_story"]
+       
 
     def update_state(self, question: str):
+        if self.is_repeated_question(question):
+            self.state["pressure"] = min(1.0, self.state["pressure"] + 0.15)
+
+            # Le suspect devient plus défensif
+            if self.state["pressure"] > 0.6:
+                self.strategy = "deflect"
         if "où" in question.lower():
             self.state["pressure"] += 0.1
         if "pourquoi" in question.lower():
@@ -66,6 +75,15 @@ class Suspect:
             response = "..."
 
         # Ajouter dans la mémoire
-        self.memory.append((question, response))
+        
 
         return response
+    
+    def is_repeated_question(self, question: str) -> bool:
+        question = question.lower().strip()
+
+        for past in self.memory:
+            if question in past["question"].lower():
+                return True
+
+        return False

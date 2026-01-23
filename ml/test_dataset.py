@@ -1,16 +1,17 @@
+from pathlib import Path
 from transformers import AutoTokenizer
 from ml.dataset import InterrogationDataset
 
-
-tokenizer = AutoTokenizer.from_pretrained("gpt2")
+tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-v0.1")
 tokenizer.pad_token = tokenizer.eos_token
 
 dataset = InterrogationDataset(
-    path="data/dataset.jsonl",
-    tokenizer=tokenizer
+    data_path=Path("data/processed/train.jsonl"),
+    tokenizer=tokenizer,
+    max_length=512,
 )
 
 sample = dataset[0]
-
-print("input_ids shape:", sample["input_ids"].shape)
-print("labels shape:", sample["labels"].shape)
+print(sample.keys())
+print(sample["input_ids"].shape)
+print(sample["labels"][:50])

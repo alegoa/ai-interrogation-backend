@@ -1,0 +1,7 @@
+torch
+transformers>=4.36
+accelerate
+peft
+bitsandbytes
+datasets
+sentencepiece

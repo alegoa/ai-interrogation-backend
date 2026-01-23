@@ -1,15 +1,11 @@
 {
   "name": "Alice",
-  "guilty": true,
-  "personality": {
-    "fear": 0.25,
-    "confidence": 0.6
-  },"official_story": "J’étais dans le salon à lire toute la soirée.",
-  "alibi": {
-    "time_window": [21.0, 22.5],
-    "location": "Salon",
-    "witnesses": [],
-    "activities": ["lire"],
-    "weaknesses": ["aucun témoin"]
-  }
+  "alibi": "J’étais chez moi toute la soirée, je regardais des documentaires à la télévision.",
+  "state": {
+    "fear": 0.2,
+    "pressure": 0.3
+  },
+  "personality": "Calme, réservé, légèrement méfiant envers la police.",
+  "notes": "Voisin de la victime. Aucun antécédent connu.",
+  "guilty": true
 }

@@ -1,14 +1,12 @@
 {
-  "name": "Bob",
-  "guilty": false,
-  "personality": {
+  "name": "bob",
+  "alibi": "J’étais chez moi toute la soirée, je regardais des documentaires à la télévision.",
+  "state": {
     "fear": 0.2,
-    "confidence": 0.8
+    "pressure": 0.3
   },
-  "official_story": {
-    "alibi": [
-      "J'étais au labo toute la soirée",
-      "Personne ne m'a dérangé"
-    ]
-  }
+  "personality": "Calme, réservé, légèrement méfiant envers la police.",
+  "notes": "Voisin de la victime. Aucun antécédent connu.",
+  "guilty": false,
+  "identity": {"age": 35, "job": "domestique", "personality": "Séduisant, drôle", "residence": "banlieue"}
 }
